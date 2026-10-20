@@ -1,0 +1,62 @@
+HW3 - HBase MovieLens
+
+Part 1 - Problem 1:
+Table: movielens_ratings
+Column Families: User, Movie, Rating, RatingMetrics
+Row Key: MovieID_UserID
+Strategy: CreateTable.hbase creates the table with the four column families. LoadData.java reads users.dat and movies.dat into maps, then reads each rating from ratings.dat. It connects the matching user and movie information, creates a Put using MovieID_UserID, and inserts the values in batches of 1000. User has userId, gender, age, occupation, and zipCode. Movie has movieId, title, and genres. Rating has score and timestamp. RatingMetrics has genreCount and titleLength, which are calculated from the movie data.
+
+Part 1 - Problem 2:
+Input: MovieLens 1M users.dat, movies.dat, and ratings.dat
+Output: Table description and five sample rows
+Strategy: After loading the ratings, VerifyTable.hbase uses describe to display the column families and scan with LIMIT 5 to display five rows. The row key is checked with get as well.
+
+Part 1 - Problem 3:
+Strategy: Finding the ratings for a particular movie is efficient since the row keys for that movie all begin with MovieID_. Finding a specific user's rating for a particular movie is also efficient since the exact MovieID_UserID row key can be used with get. Finding all movies rated by one user is inefficient because the user ID is at the end of the row key, so HBase cannot use the row-key prefix and must scan/filter the rows. VerifyTable.hbase includes examples of all three queries.
+
+Part 1 - Problem 4:
+Input: The Rating:score column for every HBase row
+Output: Row keys and scores for invalid ratings, followed by the total checked and invalid count
+Strategy: Problem1.java scans the score column and converts it to an integer. Any score less than 1 or greater than 5 is output. Values that cannot be parsed as integers are also flagged. This uses HBase data rather than reading the original input file again.
+
+Part 2 - Problem 1:
+Strategy: VersionTest.hbase uses alter to configure the Rating family to keep two versions. HBase sets versions at the column-family level, so that setting also applies to Rating:score. The score for row 1193_1 starts as 5, is changed to 4, and is then changed back to 5. A get command with VERSIONS 2 displays the two newest score values. Returning it to 5 prevents the version test from changing the final statistics.
+
+Part 2 - Problem 2:
+Input: User:userId for every rating record in HBase
+Output: UserID and Number_of_Ratings
+Strategy: Problem2.java scans the userId column and stores each user's rating count in a HashMap. It checks the counts to find the user with the most ratings and prints the result. If there is a tie, it uses the smaller user ID.
+
+Part 2 - Problem 3:
+Input: Movie:title, Movie:genres, RatingMetrics:genreCount, and User:zipCode
+Output: Row key and movie/user information for every matching rating record
+Strategy: Problem2.java uses SingleColumnValueFilter to find titles containing Star or Toy, including an OR regex pattern. It combines two substring filters to find movies belonging to both Comedy and Drama. It uses a regular expression on the stored genreCount to find movies with more than two genres. A binary prefix comparator checks whether the ZIP code starts with 9. Filters are applied while scanning HBase. HBaseFilters.hbase gives shell examples of the same filters.
+
+Part 3 - Problem 1:
+Input: Rating:score for each rating record
+Output: Rating, Count, and Percentage
+Strategy: Problem3.java scans HBase and counts how many times each score occurs. It finds the score with the highest count and divides that count by the number of valid ratings to get the percentage.
+
+Part 3 - Problem 2:
+Input: Rating:score for each rating record
+Output: Number of positive ratings, total ratings, and percentage
+Strategy: The same scan counts ratings that are 4 or 5. The positive count is divided by the total rating count and multiplied by 100.
+
+Part 3 - Problem 3:
+Input: User:age and Rating:score
+Output: Average rating for Age < 25 and Age >= 45
+Strategy: The program checks the age group stored with each rating, adds the scores for both groups, and counts the ratings in each group. The average is the sum divided by the count. The MovieLens age field uses age categories such as 1, 18, 25, 45, 50, and 56, so the groups are based on those stored values.
+
+Part 3 - Problem 4:
+Input: Movie:movieId, Movie:title, and Rating:score
+Output: MovieID, Title, Number_of_Ratings, and Average_Rating
+Strategy: Problem3.java uses a HashMap with MovieID as the key to add the scores and count the ratings for each movie. Movies with at least 200 ratings and an average of at least 4.0 are kept. The results are sorted from highest to lowest average rating, with the count and MovieID used to break ties. The averages are displayed to two decimal places, but sorting uses the full average.
+
+How the files are run:
+1. Start HBase using /opt/hbase/bin/start-hbase.sh and make sure HMaster is running.
+2. Download or locate MovieLens 1M and extract users.dat, movies.dat, and ratings.dat.
+3. Run chmod +x run_hw3.sh, then ./run_hw3.sh /path/to/ml-1m.
+4. The script runs the HBase shell commands, compiles the Java files using the HBase libraries, and saves actual program results in outputs/. These output files should be included with the submission after running on the VM.
+
+Demo used: https://github.com/mizanJewel/6304_HBase_Demo
+Dataset: https://grouplens.org/datasets/movielens/1m/
