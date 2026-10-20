@@ -4,6 +4,8 @@ import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.*;
 
 public class Problem3 {
@@ -75,6 +77,9 @@ public class Problem3 {
             }
         }
 
+        // Initialize PrintWriter to write to file
+        PrintWriter out = new PrintWriter(new FileWriter("part_3_output.txt"));
+
         // Output Part 3.1: Most common score
         int mostCommonScore = -1;
         long maxScoreCount = 0;
@@ -84,24 +89,25 @@ public class Problem3 {
                 mostCommonScore = entry.getKey();
             }
         }
-        System.out.println("Part 3.1: Most Common Rating Score");
-        System.out.println("Rating\tCount\tPercentage");
+        out.println("Part 3.1: Most Common Rating Score");
+        out.println("Rating\tCount\tPercentage");
         double mostCommonPct = ((double) maxScoreCount / totalRatings) * 100;
-        System.out.printf("%d\t%d\t%.2f%%\n\n", mostCommonScore, maxScoreCount, mostCommonPct);
+        out.printf("%d\t%d\t%.2f%%\n\n", mostCommonScore, maxScoreCount, mostCommonPct);
 
         // Output Part 3.2: Positive ratings percentage
-        System.out.println("Part 3.2: Positive Ratings (Rating >= 4)");
+        out.println("Part 3.2: Positive Ratings (Rating >= 4)");
         double positivePct = ((double) positiveRatings / totalRatings) * 100;
-        System.out.printf("Percentage of Positive Ratings: %.2f%%\n\n", positivePct);
+        out.printf("Percentage of Positive Ratings: %.2f%%\n\n", positivePct);
 
         // Output Part 3.3: Average rating by age groups
-        System.out.println("Group\tAverage_Rating");
-        System.out.printf("Age < 25\t%.2f\n", countUnder25 > 0 ? (sumUnder25 / countUnder25) : 0);
-        System.out.printf("Age >= 45\t%.2f\n\n", countOver45 > 0 ? (sumOver45 / countOver45) : 0);
+        out.println("Part 3.3: Average Rating by Age Groups");
+        out.println("Group\tAverage_Rating");
+        out.printf("Age < 25\t%.2f\n", countUnder25 > 0 ? (sumUnder25 / countUnder25) : 0);
+        out.printf("Age >= 45\t%.2f\n\n", countOver45 > 0 ? (sumOver45 / countOver45) : 0);
 
         // Output Part 3.4: Movies with ratings >= 200 and Avg >= 4.0
-        System.out.println("Part 3.4: Top Movies (Ratings >= 200, Avg >= 4.0)");
-        System.out.println("MovieID\tTitle\tNumber_of_Ratings\tAverage_Rating");
+        out.println("Part 3.4: Top Movies (Ratings >= 200, Avg >= 4.0)");
+        out.println("MovieID\tTitle\tNumber_of_Ratings\tAverage_Rating");
 
         List<Map.Entry<String, MovieStats>> topMovies = new ArrayList<>();
         for (Map.Entry<String, MovieStats> entry : movieMap.entrySet()) {
@@ -119,10 +125,13 @@ public class Problem3 {
         for (Map.Entry<String, MovieStats> entry : topMovies) {
             MovieStats ms = entry.getValue();
             double avg = ms.sumRating / ms.count;
-            System.out.printf("%s\t%s\t%d\t%.2f\n", entry.getKey(), ms.title, ms.count, avg);
+            out.printf("%s\t%s\t%d\t%.2f\n", entry.getKey(), ms.title, ms.count, avg);
         }
 
+        out.close();
         table.close();
         connection.close();
+        
+        System.out.println("Processing complete. Check 'part_3_output.txt' for the results.");
     }
 }

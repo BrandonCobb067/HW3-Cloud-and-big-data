@@ -1,0 +1,279 @@
+Part 3.1: Most Common Rating Score
+Rating	Count	Percentage
+4	348971	34.89%
+
+Part 3.2: Positive Ratings (Rating >= 4)
+Percentage of Positive Ratings: 57.52%
+
+Part 3.3: Average Rating by Age Groups
+Group	Average_Rating
+Age < 25	3.51
+Age >= 45	3.69
+
+Part 3.4: Top Movies (Ratings >= 200, Avg >= 4.0)
+MovieID	Title	Number_of_Ratings	Average_Rating
+2019	Seven Samurai (The Magnificent Seven) (Shichinin no samurai) (1954)	628	4.56
+318	Shawshank Redemption, The (1994)	2227	4.55
+858	Godfather, The (1972)	2223	4.52
+745	Close Shave, A (1995)	657	4.52
+50	Usual Suspects, The (1995)	1783	4.52
+527	Schindler's List (1993)	2304	4.51
+1148	Wrong Trousers, The (1993)	882	4.51
+922	Sunset Blvd. (a.k.a. Sunset Boulevard) (1950)	470	4.49
+1198	Raiders of the Lost Ark (1981)	2514	4.48
+904	Rear Window (1954)	1050	4.48
+1178	Paths of Glory (1957)	230	4.47
+260	Star Wars: Episode IV - A New Hope (1977)	2991	4.45
+1212	Third Man, The (1949)	480	4.45
+750	Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963)	1367	4.45
+720	Wallace & Gromit: The Best of Aardman Animation (1996)	438	4.43
+1207	To Kill a Mockingbird (1962)	928	4.43
+3435	Double Indemnity (1944)	551	4.42
+912	Casablanca (1942)	1669	4.41
+2762	Sixth Sense, The (1999)	2459	4.41
+3030	Yojimbo (1961)	215	4.40
+1204	Lawrence of Arabia (1962)	831	4.40
+913	Maltese Falcon, The (1941)	1043	4.40
+1193	One Flew Over the Cuckoo's Nest (1975)	1725	4.39
+923	Citizen Kane (1941)	1116	4.39
+3307	City Lights (1931)	271	4.39
+1250	Bridge on the River Kwai, The (1957)	938	4.39
+908	North by Northwest (1959)	1315	4.38
+1262	Great Escape, The (1963)	696	4.38
+3022	General, The (1927)	206	4.37
+1223	Grand Day Out, A (1992)	473	4.36
+1221	Godfather: Part II, The (1974)	1692	4.36
+3089	Bicycle Thief, The (Ladri di biciclette) (1948)	252	4.36
+593	Silence of the Lambs, The (1991)	2578	4.35
+1252	Chinatown (1974)	1185	4.34
+2028	Saving Private Ryan (1998)	2653	4.34
+3429	Creature Comforts (1990)	274	4.34
+1136	Monty Python and the Holy Grail (1974)	1599	4.34
+1267	Manchurian Candidate, The (1962)	765	4.33
+2324	Life Is Beautiful (La Vita � bella) (1997)	1152	4.33
+1131	Jean de Florette (1986)	216	4.32
+1147	When We Were Kings (1996)	277	4.32
+1234	Sting, The (1973)	1049	4.32
+2858	American Beauty (1999)	3428	4.32
+2571	Matrix, The (1999)	2590	4.32
+1284	Big Sleep, The (1946)	541	4.31
+2186	Strangers on a Train (1951)	482	4.30
+1197	Princess Bride, The (1987)	2318	4.30
+1233	Boat, The (Das Boot) (1981)	1001	4.30
+1260	M (1931)	308	4.30
+898	Philadelphia Story, The (1940)	582	4.30
+910	Some Like It Hot (1959)	832	4.30
+953	It's a Wonderful Life (1946)	729	4.30
+1203	12 Angry Men (1957)	616	4.30
+930	Notorious (1946)	445	4.29
+1196	Star Wars: Episode V - The Empire Strikes Back (1980)	2990	4.29
+1254	Treasure of the Sierra Madre, The (1948)	453	4.29
+1172	Cinema Paradiso (1988)	615	4.29
+1224	Henry V (1989)	426	4.29
+2357	Central Station (Central do Brasil) (1998)	215	4.28
+899	Singin' in the Rain (1952)	751	4.28
+905	It Happened One Night (1934)	374	4.28
+3469	Inherit the Wind (1960)	268	4.28
+296	Pulp Fiction (1994)	2171	4.28
+1213	GoodFellas (1990)	1657	4.28
+541	Blade Runner (1982)	1800	4.27
+903	Vertigo (1958)	905	4.27
+2203	Shadow of a Doubt (1943)	233	4.27
+1945	On the Waterfront (1954)	519	4.27
+1217	Ran (1985)	357	4.27
+1272	Patton (1970)	645	4.27
+1132	Manon of the Spring (Manon des sources) (1986)	220	4.26
+926	All About Eve (1950)	403	4.26
+608	Fargo (1996)	2513	4.25
+1276	Cool Hand Luke (1967)	930	4.25
+1189	Thin Blue Line, The (1988)	269	4.25
+1225	Amadeus (1984)	1382	4.25
+969	African Queen, The (1951)	1057	4.25
+1278	Young Frankenstein (1974)	1193	4.25
+3730	Conversation, The (1974)	453	4.25
+951	His Girl Friday (1940)	397	4.25
+1299	Killing Fields, The (1984)	732	4.25
+919	Wizard of Oz, The (1939)	1718	4.25
+1247	Graduate, The (1967)	1261	4.25
+678	Some Folks Call It a Sling Blade (1993)	306	4.25
+1208	Apocalypse Now (1979)	1176	4.24
+954	Mr. Smith Goes to Washington (1939)	383	4.24
+3468	Hustler, The (1961)	450	4.24
+950	Thin Man, The (1934)	292	4.24
+2804	Christmas Story, A (1983)	1352	4.24
+3462	Modern Times (1936)	305	4.24
+110	Braveheart (1995)	2443	4.23
+2859	Stop Making Sense (1984)	239	4.23
+1949	Man for All Seasons, A (1966)	219	4.23
+1237	Seventh Seal, The (Sjunde inseglet, Det) (1957)	299	4.23
+3196	Stalag 17 (1953)	394	4.23
+306	Three Colors: Red (1994)	334	4.23
+2329	American History X (1998)	640	4.23
+3897	Almost Famous (2000)	994	4.23
+1104	Streetcar Named Desire, A (1951)	483	4.23
+2692	Run Lola Run (Lola rennt) (1998)	1072	4.22
+1617	L.A. Confidential (1997)	2288	4.22
+3114	Toy Story 2 (1999)	1585	4.22
+1219	Psycho (1960)	1263	4.22
+3683	Blood Simple (1984)	628	4.22
+916	Roman Holiday (1953)	425	4.22
+1248	Touch of Evil (1958)	514	4.22
+1304	Butch Cassidy and the Sundance Kid (1969)	1419	4.22
+1256	Duck Soup (1933)	594	4.21
+1358	Sling Blade (1996)	1177	4.21
+928	Rebecca (1940)	386	4.20
+942	Laura (1944)	292	4.20
+1218	Killer, The (Die xue shuang xiong) (1989)	244	4.20
+1927	All Quiet on the Western Front (1930)	268	4.19
+1242	Glory (1989)	1112	4.19
+3629	Gold Rush, The (1925)	275	4.19
+246	Hoop Dreams (1994)	716	4.19
+1228	Raging Bull (1980)	677	4.19
+111	Taxi Driver (1976)	1240	4.18
+911	Charade (1963)	306	4.18
+1288	This Is Spinal Tap (1984)	1118	4.18
+1283	High Noon (1952)	403	4.18
+1704	Good Will Hunting (1997)	1548	4.18
+1280	Raise the Red Lantern (1991)	277	4.17
+955	Bringing Up Baby (1938)	413	4.17
+1269	Arsenic and Old Lace (1944)	672	4.17
+1235	Harold and Maude (1971)	697	4.16
+1214	Alien (1979)	2024	4.16
+3147	Green Mile, The (1999)	1222	4.15
+914	My Fair Lady (1964)	636	4.15
+1240	Terminator, The (1984)	2098	4.15
+3035	Mister Roberts (1955)	421	4.15
+3000	Princess Mononoke, The (Mononoke Hime) (1997)	345	4.15
+945	Top Hat (1935)	251	4.15
+1449	Waiting for Guffman (1996)	462	4.15
+1	Toy Story (1995)	2077	4.15
+1300	My Life as a Dog (Mitt liv som hund) (1985)	330	4.15
+2300	Producers, The (1968)	658	4.14
+1230	Annie Hall (1977)	1334	4.14
+1293	Gandhi (1982)	671	4.14
+1253	Day the Earth Stood Still, The (1951)	559	4.14
+2501	October Sky (1999)	588	4.14
+3265	Hard-Boiled (Lashou shentan) (1992)	327	4.14
+2788	And Now for Something Completely Different (1971)	451	4.14
+1537	Shall We Dance? (Shall We Dansu?) (1996)	350	4.14
+1089	Reservoir Dogs (1992)	1259	4.14
+3095	Grapes of Wrath, The (1940)	521	4.13
+1201	Good, The Bad and The Ugly, The (1966)	822	4.13
+1291	Indiana Jones and the Last Crusade (1989)	1628	4.13
+1950	In the Heat of the Night (1967)	348	4.13
+1303	Man Who Would Be King, The (1975)	310	4.13
+2396	Shakespeare in Love (1998)	2369	4.13
+909	Apartment, The (1960)	417	4.13
+1200	Aliens (1986)	1820	4.13
+2997	Being John Malkovich (1999)	2241	4.13
+1294	M*A*S*H (1970)	1099	4.12
+1939	Best Years of Our Lives, The (1946)	236	4.12
+1036	Die Hard (1988)	1666	4.12
+2918	Ferris Bueller's Day Off (1986)	1473	4.12
+3949	Requiem for a Dream (2000)	304	4.12
+1952	Midnight Cowboy (1969)	663	4.11
+1211	Wings of Desire (Der Himmel �ber Berlin) (1987)	242	4.11
+1222	Full Metal Jacket (1987)	1254	4.11
+1287	Ben-Hur (1959)	704	4.11
+1263	Deer Hunter, The (1978)	700	4.11
+47	Seven (Se7en) (1995)	1137	4.11
+293	Professional, The (a.k.a. Leon: The Professional) (1994)	923	4.11
+3578	Gladiator (2000)	1924	4.11
+1251	8 1/2 (1963)	228	4.11
+1258	Shining, The (1980)	1087	4.10
+457	Fugitive, The (1993)	1995	4.10
+3811	Breaker Morant (1980)	360	4.10
+933	To Catch a Thief (1955)	443	4.10
+307	Three Colors: Blue (1993)	243	4.10
+1953	French Connection, The (1971)	861	4.10
+1199	Brazil (1985)	913	4.10
+1259	Stand by Me (1986)	1785	4.10
+1084	Bonnie and Clyde (1967)	686	4.10
+1944	From Here to Eternity (1953)	364	4.10
+994	Big Night (1996)	450	4.10
+58	Postino, Il (The Postman) (1994)	501	4.09
+1266	Unforgiven (1992)	997	4.09
+1090	Platoon (1986)	1143	4.09
+3088	Harvey (1950)	356	4.09
+1387	Jaws (1975)	1697	4.09
+741	Ghost in the Shell (Kokaku kidotai) (1995)	314	4.09
+356	Forrest Gump (1994)	2194	4.09
+599	Wild Bunch, The (1969)	264	4.09
+3083	All About My Mother (Todo Sobre Mi Madre) (1999)	394	4.09
+3365	Searchers, The (1956)	245	4.09
+446	Farewell My Concubine (1993)	254	4.08
+800	Lone Star (1996)	630	4.08
+2010	Metropolis (1926)	388	4.08
+3334	Key Largo (1948)	461	4.08
+1244	Manhattan (1979)	718	4.08
+3359	Breaking Away (1979)	520	4.08
+1231	Right Stuff, The (1983)	750	4.08
+1086	Dial M for Murder (1954)	379	4.08
+3741	Badlands (1973)	241	4.08
+1206	Clockwork Orange, A (1971)	1229	4.08
+2959	Fight Club (1999)	1451	4.08
+232	Eat Drink Man Woman (1994)	346	4.08
+965	39 Steps, The (1935)	253	4.08
+2132	Who's Afraid of Virginia Woolf? (1966)	297	4.07
+2064	Roger & Me (1989)	798	4.07
+3198	Papillon (1973)	325	4.07
+150	Apollo 13 (1995)	1251	4.07
+1307	When Harry Met Sally... (1989)	1568	4.07
+3911	Best in Show (2000)	657	4.07
+924	2001: A Space Odyssey (1968)	1716	4.07
+2067	Doctor Zhivago (1965)	564	4.07
+162	Crumb (1994)	491	4.06
+29	City of Lost Children, The (1995)	403	4.06
+3006	Insider, The (1999)	884	4.06
+589	Terminator 2: Judgment Day (1991)	2649	4.06
+1947	West Side Story (1961)	761	4.06
+2677	Buena Vista Social Club (1999)	230	4.06
+2966	Straight Story, The (1999)	429	4.06
+1264	Diva (1981)	257	4.05
+1961	Rain Man (1988)	1330	4.05
+1226	Quiet Man, The (1952)	226	4.05
+3421	Animal House (1978)	1207	4.05
+1610	Hunt for Red October, The (1990)	1652	4.05
+1963	Take the Money and Run (1969)	252	4.05
+2973	Crimes and Misdemeanors (1989)	460	4.05
+971	Cat on a Hot Tin Roof (1958)	271	4.05
+2761	Iron Giant, The (1999)	674	4.05
+3671	Blazing Saddles (1974)	1119	4.05
+1719	Sweet Hereafter, The (1997)	381	4.04
+3037	Little Big Man (1970)	591	4.04
+3508	Outlaw Josey Wales, The (1976)	365	4.04
+2819	Three Days of the Condor (1975)	319	4.04
+3097	Shop Around the Corner, The (1940)	206	4.04
+1041	Secrets & Lies (1996)	474	4.04
+3507	Odd Couple, The (1968)	389	4.03
+1281	Great Dictator, The (1940)	216	4.03
+2917	Body Heat (1981)	504	4.03
+1931	Mutiny on the Bounty (1935)	225	4.03
+2336	Elizabeth (1998)	938	4.03
+3783	Croupier (1998)	235	4.03
+17	Sense and Sensibility (1995)	835	4.03
+3363	American Graffiti (1973)	990	4.03
+3819	Tampopo (1986)	245	4.02
+1210	Star Wars: Episode VI - Return of the Jedi (1983)	2883	4.02
+3814	Love and Death (1975)	219	4.02
+3467	Hud (1963)	279	4.02
+1394	Raising Arizona (1987)	1434	4.02
+3504	Network (1976)	688	4.02
+2728	Spartacus (1960)	426	4.02
+1080	Monty Python's Life of Brian (1979)	926	4.02
+2248	Say Anything... (1989)	914	4.02
+3471	Close Encounters of the Third Kind (1977)	1451	4.01
+2908	Boys Don't Cry (1999)	850	4.01
+3007	American Movie (1999)	295	4.01
+1292	Being There (1979)	591	4.01
+2313	Elephant Man, The (1980)	457	4.01
+2194	Untouchables, The (1987)	1127	4.01
+3498	Midnight Express (1978)	295	4.01
+1246	Dead Poets Society (1989)	855	4.01
+1245	Miller's Crossing (1990)	358	4.01
+1249	Nikita (La Femme Nikita) (1990)	733	4.01
+2944	Dirty Dozen, The (1967)	707	4.00
+1175	Delicatessen (1991)	368	4.00
+1238	Local Hero (1983)	351	4.00
+497	Much Ado About Nothing (1993)	667	4.00
+2670	Run Silent, Run Deep (1958)	220	4.00

@@ -1,0 +1,6 @@
+hbase:001:0> alter 'movielens_ratings', {'NAME'=>'Rating', 'VERSIONS'=>2}
+Updating all regions with the new schema...
+1/1 regions updated.
+Done.
+Took 2.0952 seconds                                                                 
+hbase:002:0> exit
