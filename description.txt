@@ -4,7 +4,7 @@ Part 1 - Problem 1:
 Table: movielens_ratings
 Column Families: User, Movie, Rating, RatingMetrics
 Row Key: MovieID_UserID
-Strategy: CreateTable.hbase creates the table with the four column families. LoadData.java reads users.dat and movies.dat into maps, then reads each rating from ratings.dat. It connects the matching user and movie information, creates a Put using MovieID_UserID, and inserts the values in batches of 1000. User has userId, gender, age, occupation, and zipCode. Movie has movieId, title, and genres. Rating has score and timestamp. RatingMetrics has genreCount and titleLength, which are calculated from the movie data.
+Strategy: CreateTable.hbase disables and drops movielens_ratings if it already exists, then creates the table with the four column families. LoadData.java reads users.dat and movies.dat into maps, then reads each rating from ratings.dat. It connects the matching user and movie information, creates a Put using MovieID_UserID, and inserts the values using a BufferedMutator flushed every 1000 rows. User has userId, gender, age, occupation, and zipCode. Movie has movieId, title, and genres. Rating has score and timestamp. RatingMetrics has genreCount and titleLength, which are calculated from the movie data.
 
 Part 1 - Problem 2:
 Input: MovieLens 1M users.dat, movies.dat, and ratings.dat
@@ -20,7 +20,7 @@ Output: Row keys and scores for invalid ratings, followed by the total checked a
 Strategy: Problem1.java scans the score column and converts it to an integer. Any score less than 1 or greater than 5 is output. Values that cannot be parsed as integers are also flagged. This uses HBase data rather than reading the original input file again.
 
 Part 2 - Problem 1:
-Strategy: VersionTest.hbase uses alter to configure the Rating family to keep two versions. HBase sets versions at the column-family level, so that setting also applies to Rating:score. The score for row 1193_1 starts as 5, is changed to 4, and is then changed back to 5. A get command with VERSIONS 2 displays the two newest score values. Returning it to 5 prevents the version test from changing the final statistics.
+Strategy: Problem2.java uses the Admin API to configure the Rating family to keep two versions. VersionTest.hbase also shows the corresponding alter command and retrieves the versions. HBase sets versions at the column-family level, so that setting also applies to Rating:score. The score for row 1193_1 starts as 5, is changed to 4, and is then changed back to 5. A get command with VERSIONS 2 displays the two newest score values. Returning it to 5 prevents the version test from changing the final statistics.
 
 Part 2 - Problem 2:
 Input: User:userId for every rating record in HBase
@@ -30,7 +30,7 @@ Strategy: Problem2.java scans the userId column and stores each user's rating co
 Part 2 - Problem 3:
 Input: Movie:title, Movie:genres, RatingMetrics:genreCount, and User:zipCode
 Output: Row key and movie/user information for every matching rating record
-Strategy: Problem2.java uses SingleColumnValueFilter to find titles containing Star or Toy, including an OR regex pattern. It combines two substring filters to find movies belonging to both Comedy and Drama. It uses a regular expression on the stored genreCount to find movies with more than two genres. A binary prefix comparator checks whether the ZIP code starts with 9. Filters are applied while scanning HBase. HBaseFilters.hbase gives shell examples of the same filters.
+Strategy: Problem2.java uses SingleColumnValueFilter to find titles containing Star or Toy, including an OR regex pattern. It combines two substring filters to find movies belonging to both Comedy and Drama. It uses a regular expression requiring at least two genre separators to find movies with more than two genres. HBaseFilters.hbase also demonstrates filtering the stored genreCount. A binary prefix comparator checks whether the ZIP code starts with 9. Filters are applied while scanning HBase. HBaseFilters.hbase gives shell examples of the same filters.
 
 Part 3 - Problem 1:
 Input: Rating:score for each rating record
@@ -39,7 +39,7 @@ Strategy: Problem3.java scans HBase and counts how many times each score occurs.
 
 Part 3 - Problem 2:
 Input: Rating:score for each rating record
-Output: Number of positive ratings, total ratings, and percentage
+Output: Percentage of positive ratings
 Strategy: The same scan counts ratings that are 4 or 5. The positive count is divided by the total rating count and multiplied by 100.
 
 Part 3 - Problem 3:
@@ -50,13 +50,12 @@ Strategy: The program checks the age group stored with each rating, adds the sco
 Part 3 - Problem 4:
 Input: Movie:movieId, Movie:title, and Rating:score
 Output: MovieID, Title, Number_of_Ratings, and Average_Rating
-Strategy: Problem3.java uses a HashMap with MovieID as the key to add the scores and count the ratings for each movie. Movies with at least 200 ratings and an average of at least 4.0 are kept. The results are sorted from highest to lowest average rating, with the count and MovieID used to break ties. The averages are displayed to two decimal places, but sorting uses the full average.
+Strategy: Problem3.java uses a HashMap with MovieID as the key to add the scores and count the ratings for each movie. Movies with at least 200 ratings and an average of at least 4.0 are kept. The results are sorted from highest to lowest average rating, with descending rating count and ascending numeric MovieID used to break ties. The averages are displayed to two decimal places, but sorting uses the full average.
 
 How the files are run:
 1. Start HBase using /opt/hbase/bin/start-hbase.sh and make sure HMaster is running.
 2. Download or locate MovieLens 1M and extract users.dat, movies.dat, and ratings.dat.
 3. Run chmod +x run_hw3.sh, then ./run_hw3.sh /path/to/ml-1m.
-4. The script runs the HBase shell commands, compiles the Java files using the HBase libraries, and saves actual program results in outputs/. These output files should be included with the submission after running on the VM.
-
-Demo used: https://github.com/mizanJewel/6304_HBase_Demo
-Dataset: https://grouplens.org/datasets/movielens/1m/
+4. The script compiles the Java files using the HBase libraries, creates a fresh table, loads all ratings, runs shell verification and Java queries, and saves actual results in the root directory. It deletes and recreates movielens_ratings on every run, discarding previous table contents so repeated runs start cleanly.
+5. After the HBase programs finish successfully, package_submission.sh creates HW3_HBase_submission.zip in the root directory containing only the required Java sources, HBase command files, description.txt, and result outputs. The Bash scripts remain in the root directory for local use. The dataset archive and HBase runtime files are not required Canvas deliverables.
+6. HBASE_CONF_DIR can select a separate HBase configuration; HBASE_BIN can select the hbase executable. The previously completed validation run used an isolated standalone HBase 2.6.6 instance and the supplied MovieLens archive.

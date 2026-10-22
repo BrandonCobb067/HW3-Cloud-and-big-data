@@ -1,0 +1,257 @@
+hbase:001:0> scan 'movielens_ratings', {FILTER => "SingleColumnValueFilter('Movie','title',=,'regexstring:Star|Toy',true,true)", LIMIT => 5}
+ROW  COLUMN+CELL
+ 1038_1015 column=Movie:genres, timestamp=2026-10-22T04:00:08.737, value=Drama
+ 1038_1015 column=Movie:movieId, timestamp=2026-10-22T04:00:08.737, value=1038
+ 1038_1015 column=Movie:title, timestamp=2026-10-22T04:00:08.737, value=Unhook the Stars (1996)
+ 1038_1015 column=Rating:score, timestamp=2026-10-22T04:00:08.737, value=2
+ 1038_1015 column=Rating:timestamp, timestamp=2026-10-22T04:00:08.737, value=979454487
+ 1038_1015 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:08.737, value=1
+ 1038_1015 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:08.737, value=23
+ 1038_1015 column=User:age, timestamp=2026-10-22T04:00:08.737, value=35
+ 1038_1015 column=User:gender, timestamp=2026-10-22T04:00:08.737, value=M
+ 1038_1015 column=User:occupation, timestamp=2026-10-22T04:00:08.737, value=3
+ 1038_1015 column=User:userId, timestamp=2026-10-22T04:00:08.737, value=1015
+ 1038_1015 column=User:zipCode, timestamp=2026-10-22T04:00:08.737, value=11220
+ 1038_1150 column=Movie:genres, timestamp=2026-10-22T04:00:09.924, value=Drama
+ 1038_1150 column=Movie:movieId, timestamp=2026-10-22T04:00:09.924, value=1038
+ 1038_1150 column=Movie:title, timestamp=2026-10-22T04:00:09.924, value=Unhook the Stars (1996)
+ 1038_1150 column=Rating:score, timestamp=2026-10-22T04:00:09.924, value=2
+ 1038_1150 column=Rating:timestamp, timestamp=2026-10-22T04:00:09.924, value=974875561
+ 1038_1150 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:09.924, value=1
+ 1038_1150 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:09.924, value=23
+ 1038_1150 column=User:age, timestamp=2026-10-22T04:00:09.924, value=25
+ 1038_1150 column=User:gender, timestamp=2026-10-22T04:00:09.924, value=F
+ 1038_1150 column=User:occupation, timestamp=2026-10-22T04:00:09.924, value=20
+ 1038_1150 column=User:userId, timestamp=2026-10-22T04:00:09.924, value=1150
+ 1038_1150 column=User:zipCode, timestamp=2026-10-22T04:00:09.924, value=75226
+ 1038_1164 column=Movie:genres, timestamp=2026-10-22T04:00:10.011, value=Drama
+ 1038_1164 column=Movie:movieId, timestamp=2026-10-22T04:00:10.011, value=1038
+ 1038_1164 column=Movie:title, timestamp=2026-10-22T04:00:10.011, value=Unhook the Stars (1996)
+ 1038_1164 column=Rating:score, timestamp=2026-10-22T04:00:10.011, value=4
+ 1038_1164 column=Rating:timestamp, timestamp=2026-10-22T04:00:10.011, value=979773071
+ 1038_1164 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:10.011, value=1
+ 1038_1164 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:10.011, value=23
+ 1038_1164 column=User:age, timestamp=2026-10-22T04:00:10.011, value=25
+ 1038_1164 column=User:gender, timestamp=2026-10-22T04:00:10.011, value=F
+ 1038_1164 column=User:occupation, timestamp=2026-10-22T04:00:10.011, value=19
+ 1038_1164 column=User:userId, timestamp=2026-10-22T04:00:10.011, value=1164
+ 1038_1164 column=User:zipCode, timestamp=2026-10-22T04:00:10.011, value=90020
+ 1038_1837 column=Movie:genres, timestamp=2026-10-22T04:00:15.705, value=Drama
+ 1038_1837 column=Movie:movieId, timestamp=2026-10-22T04:00:15.705, value=1038
+ 1038_1837 column=Movie:title, timestamp=2026-10-22T04:00:15.705, value=Unhook the Stars (1996)
+ 1038_1837 column=Rating:score, timestamp=2026-10-22T04:00:15.705, value=4
+ 1038_1837 column=Rating:timestamp, timestamp=2026-10-22T04:00:15.705, value=974839062
+ 1038_1837 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:15.705, value=1
+ 1038_1837 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:15.705, value=23
+ 1038_1837 column=User:age, timestamp=2026-10-22T04:00:15.705, value=25
+ 1038_1837 column=User:gender, timestamp=2026-10-22T04:00:15.705, value=M
+ 1038_1837 column=User:occupation, timestamp=2026-10-22T04:00:15.705, value=2
+ 1038_1837 column=User:userId, timestamp=2026-10-22T04:00:15.705, value=1837
+ 1038_1837 column=User:zipCode, timestamp=2026-10-22T04:00:15.705, value=08817
+ 1038_1897 column=Movie:genres, timestamp=2026-10-22T04:00:16.161, value=Drama
+ 1038_1897 column=Movie:movieId, timestamp=2026-10-22T04:00:16.161, value=1038
+ 1038_1897 column=Movie:title, timestamp=2026-10-22T04:00:16.161, value=Unhook the Stars (1996)
+ 1038_1897 column=Rating:score, timestamp=2026-10-22T04:00:16.161, value=3
+ 1038_1897 column=Rating:timestamp, timestamp=2026-10-22T04:00:16.161, value=1037584852
+ 1038_1897 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:16.161, value=1
+ 1038_1897 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:16.161, value=23
+ 1038_1897 column=User:age, timestamp=2026-10-22T04:00:16.161, value=50
+ 1038_1897 column=User:gender, timestamp=2026-10-22T04:00:16.161, value=F
+ 1038_1897 column=User:occupation, timestamp=2026-10-22T04:00:16.161, value=2
+ 1038_1897 column=User:userId, timestamp=2026-10-22T04:00:16.161, value=1897
+ 1038_1897 column=User:zipCode, timestamp=2026-10-22T04:00:16.161, value=94530
+5 row(s)
+Took 0.5765 seconds
+hbase:002:0> scan 'movielens_ratings', {FILTER => "SingleColumnValueFilter('Movie','genres',=,'substring:Comedy',true,true) AND SingleColumnValueFilter('Movie','genres',=,'substring:Drama',true,true)", LIMIT => 5}
+ROW  COLUMN+CELL
+ 1014_1068 column=Movie:genres, timestamp=2026-10-22T04:00:09.174, value=Children's|Comedy|Drama
+ 1014_1068 column=Movie:movieId, timestamp=2026-10-22T04:00:09.174, value=1014
+ 1014_1068 column=Movie:title, timestamp=2026-10-22T04:00:09.174, value=Pollyanna (1960)
+ 1014_1068 column=Rating:score, timestamp=2026-10-22T04:00:09.174, value=4
+ 1014_1068 column=Rating:timestamp, timestamp=2026-10-22T04:00:09.174, value=974949204
+ 1014_1068 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:09.174, value=3
+ 1014_1068 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:09.174, value=16
+ 1014_1068 column=User:age, timestamp=2026-10-22T04:00:09.174, value=18
+ 1014_1068 column=User:gender, timestamp=2026-10-22T04:00:09.174, value=F
+ 1014_1068 column=User:occupation, timestamp=2026-10-22T04:00:09.174, value=4
+ 1014_1068 column=User:userId, timestamp=2026-10-22T04:00:09.174, value=1068
+ 1014_1068 column=User:zipCode, timestamp=2026-10-22T04:00:09.174, value=77581
+ 1014_1111 column=Movie:genres, timestamp=2026-10-22T04:00:09.485, value=Children's|Comedy|Drama
+ 1014_1111 column=Movie:movieId, timestamp=2026-10-22T04:00:09.485, value=1014
+ 1014_1111 column=Movie:title, timestamp=2026-10-22T04:00:09.485, value=Pollyanna (1960)
+ 1014_1111 column=Rating:score, timestamp=2026-10-22T04:00:09.485, value=5
+ 1014_1111 column=Rating:timestamp, timestamp=2026-10-22T04:00:09.485, value=974918663
+ 1014_1111 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:09.485, value=3
+ 1014_1111 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:09.485, value=16
+ 1014_1111 column=User:age, timestamp=2026-10-22T04:00:09.485, value=50
+ 1014_1111 column=User:gender, timestamp=2026-10-22T04:00:09.485, value=F
+ 1014_1111 column=User:occupation, timestamp=2026-10-22T04:00:09.485, value=16
+ 1014_1111 column=User:userId, timestamp=2026-10-22T04:00:09.485, value=1111
+ 1014_1111 column=User:zipCode, timestamp=2026-10-22T04:00:09.485, value=44319
+ 1014_1120 column=Movie:genres, timestamp=2026-10-22T04:00:09.610, value=Children's|Comedy|Drama
+ 1014_1120 column=Movie:movieId, timestamp=2026-10-22T04:00:09.610, value=1014
+ 1014_1120 column=Movie:title, timestamp=2026-10-22T04:00:09.610, value=Pollyanna (1960)
+ 1014_1120 column=Rating:score, timestamp=2026-10-22T04:00:09.610, value=4
+ 1014_1120 column=Rating:timestamp, timestamp=2026-10-22T04:00:09.610, value=975623015
+ 1014_1120 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:09.610, value=3
+ 1014_1120 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:09.610, value=16
+ 1014_1120 column=User:age, timestamp=2026-10-22T04:00:09.610, value=18
+ 1014_1120 column=User:gender, timestamp=2026-10-22T04:00:09.610, value=M
+ 1014_1120 column=User:occupation, timestamp=2026-10-22T04:00:09.610, value=4
+ 1014_1120 column=User:userId, timestamp=2026-10-22T04:00:09.610, value=1120
+ 1014_1120 column=User:zipCode, timestamp=2026-10-22T04:00:09.610, value=95616
+ 1014_114 column=Movie:genres, timestamp=2026-10-22T04:00:02.065, value=Children's|Comedy|Drama
+ 1014_114 column=Movie:movieId, timestamp=2026-10-22T04:00:02.065, value=1014
+ 1014_114 column=Movie:title, timestamp=2026-10-22T04:00:02.065, value=Pollyanna (1960)
+ 1014_114 column=Rating:score, timestamp=2026-10-22T04:00:02.065, value=4
+ 1014_114 column=Rating:timestamp, timestamp=2026-10-22T04:00:02.065, value=977506599
+ 1014_114 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:02.065, value=3
+ 1014_114 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:02.065, value=16
+ 1014_114 column=User:age, timestamp=2026-10-22T04:00:02.065, value=25
+ 1014_114 column=User:gender, timestamp=2026-10-22T04:00:02.065, value=F
+ 1014_114 column=User:occupation, timestamp=2026-10-22T04:00:02.065, value=2
+ 1014_114 column=User:userId, timestamp=2026-10-22T04:00:02.065, value=114
+ 1014_114 column=User:zipCode, timestamp=2026-10-22T04:00:02.065, value=83712
+ 1014_1156 column=Movie:genres, timestamp=2026-10-22T04:00:09.969, value=Children's|Comedy|Drama
+ 1014_1156 column=Movie:movieId, timestamp=2026-10-22T04:00:09.969, value=1014
+ 1014_1156 column=Movie:title, timestamp=2026-10-22T04:00:09.969, value=Pollyanna (1960)
+ 1014_1156 column=Rating:score, timestamp=2026-10-22T04:00:09.969, value=3
+ 1014_1156 column=Rating:timestamp, timestamp=2026-10-22T04:00:09.969, value=974864257
+ 1014_1156 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:09.969, value=3
+ 1014_1156 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:09.969, value=16
+ 1014_1156 column=User:age, timestamp=2026-10-22T04:00:09.969, value=50
+ 1014_1156 column=User:gender, timestamp=2026-10-22T04:00:09.969, value=F
+ 1014_1156 column=User:occupation, timestamp=2026-10-22T04:00:09.969, value=2
+ 1014_1156 column=User:userId, timestamp=2026-10-22T04:00:09.969, value=1156
+ 1014_1156 column=User:zipCode, timestamp=2026-10-22T04:00:09.969, value=33334
+5 row(s)
+Took 0.0692 seconds
+hbase:003:0> scan 'movielens_ratings', {FILTER => "SingleColumnValueFilter('RatingMetrics','genreCount',=,'regexstring:^([3-9]|[1-9][0-9]+)$',true,true)", LIMIT => 5}
+ROW  COLUMN+CELL
+ 1007_1004 column=Movie:genres, timestamp=2026-10-22T04:00:08.661, value=Children's|Comedy|Western
+ 1007_1004 column=Movie:movieId, timestamp=2026-10-22T04:00:08.661, value=1007
+ 1007_1004 column=Movie:title, timestamp=2026-10-22T04:00:08.661, value=Apple Dumpling Gang, The (1975)
+ 1007_1004 column=Rating:score, timestamp=2026-10-22T04:00:08.661, value=3
+ 1007_1004 column=Rating:timestamp, timestamp=2026-10-22T04:00:08.661, value=975038811
+ 1007_1004 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:08.661, value=3
+ 1007_1004 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:08.661, value=31
+ 1007_1004 column=User:age, timestamp=2026-10-22T04:00:08.661, value=25
+ 1007_1004 column=User:gender, timestamp=2026-10-22T04:00:08.661, value=M
+ 1007_1004 column=User:occupation, timestamp=2026-10-22T04:00:08.661, value=3
+ 1007_1004 column=User:userId, timestamp=2026-10-22T04:00:08.661, value=1004
+ 1007_1004 column=User:zipCode, timestamp=2026-10-22T04:00:08.661, value=95136
+ 1007_1019 column=Movie:genres, timestamp=2026-10-22T04:00:08.815, value=Children's|Comedy|Western
+ 1007_1019 column=Movie:movieId, timestamp=2026-10-22T04:00:08.815, value=1007
+ 1007_1019 column=Movie:title, timestamp=2026-10-22T04:00:08.815, value=Apple Dumpling Gang, The (1975)
+ 1007_1019 column=Rating:score, timestamp=2026-10-22T04:00:08.815, value=3
+ 1007_1019 column=Rating:timestamp, timestamp=2026-10-22T04:00:08.815, value=975425305
+ 1007_1019 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:08.815, value=3
+ 1007_1019 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:08.815, value=31
+ 1007_1019 column=User:age, timestamp=2026-10-22T04:00:08.815, value=35
+ 1007_1019 column=User:gender, timestamp=2026-10-22T04:00:08.815, value=M
+ 1007_1019 column=User:occupation, timestamp=2026-10-22T04:00:08.815, value=1
+ 1007_1019 column=User:userId, timestamp=2026-10-22T04:00:08.815, value=1019
+ 1007_1019 column=User:zipCode, timestamp=2026-10-22T04:00:08.815, value=60640
+ 1007_1051 column=Movie:genres, timestamp=2026-10-22T04:00:09.008, value=Children's|Comedy|Western
+ 1007_1051 column=Movie:movieId, timestamp=2026-10-22T04:00:09.008, value=1007
+ 1007_1051 column=Movie:title, timestamp=2026-10-22T04:00:09.008, value=Apple Dumpling Gang, The (1975)
+ 1007_1051 column=Rating:score, timestamp=2026-10-22T04:00:09.008, value=3
+ 1007_1051 column=Rating:timestamp, timestamp=2026-10-22T04:00:09.008, value=974957093
+ 1007_1051 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:09.008, value=3
+ 1007_1051 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:09.008, value=31
+ 1007_1051 column=User:age, timestamp=2026-10-22T04:00:09.008, value=25
+ 1007_1051 column=User:gender, timestamp=2026-10-22T04:00:09.008, value=F
+ 1007_1051 column=User:occupation, timestamp=2026-10-22T04:00:09.008, value=0
+ 1007_1051 column=User:userId, timestamp=2026-10-22T04:00:09.008, value=1051
+ 1007_1051 column=User:zipCode, timestamp=2026-10-22T04:00:09.008, value=60513
+ 1007_1100 column=Movie:genres, timestamp=2026-10-22T04:00:09.406, value=Children's|Comedy|Western
+ 1007_1100 column=Movie:movieId, timestamp=2026-10-22T04:00:09.406, value=1007
+ 1007_1100 column=Movie:title, timestamp=2026-10-22T04:00:09.406, value=Apple Dumpling Gang, The (1975)
+ 1007_1100 column=Rating:score, timestamp=2026-10-22T04:00:09.406, value=1
+ 1007_1100 column=Rating:timestamp, timestamp=2026-10-22T04:00:09.406, value=974924171
+ 1007_1100 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:09.406, value=3
+ 1007_1100 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:09.406, value=31
+ 1007_1100 column=User:age, timestamp=2026-10-22T04:00:09.406, value=25
+ 1007_1100 column=User:gender, timestamp=2026-10-22T04:00:09.406, value=M
+ 1007_1100 column=User:occupation, timestamp=2026-10-22T04:00:09.406, value=0
+ 1007_1100 column=User:userId, timestamp=2026-10-22T04:00:09.406, value=1100
+ 1007_1100 column=User:zipCode, timestamp=2026-10-22T04:00:09.406, value=60090
+ 1007_1119 column=Movie:genres, timestamp=2026-10-22T04:00:09.569, value=Children's|Comedy|Western
+ 1007_1119 column=Movie:movieId, timestamp=2026-10-22T04:00:09.569, value=1007
+ 1007_1119 column=Movie:title, timestamp=2026-10-22T04:00:09.569, value=Apple Dumpling Gang, The (1975)
+ 1007_1119 column=Rating:score, timestamp=2026-10-22T04:00:09.569, value=3
+ 1007_1119 column=Rating:timestamp, timestamp=2026-10-22T04:00:09.569, value=974914181
+ 1007_1119 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:09.569, value=3
+ 1007_1119 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:09.569, value=31
+ 1007_1119 column=User:age, timestamp=2026-10-22T04:00:09.569, value=35
+ 1007_1119 column=User:gender, timestamp=2026-10-22T04:00:09.569, value=M
+ 1007_1119 column=User:occupation, timestamp=2026-10-22T04:00:09.569, value=1
+ 1007_1119 column=User:userId, timestamp=2026-10-22T04:00:09.569, value=1119
+ 1007_1119 column=User:zipCode, timestamp=2026-10-22T04:00:09.569, value=90504
+5 row(s)
+Took 0.0438 seconds
+hbase:004:0> scan 'movielens_ratings', {FILTER => "SingleColumnValueFilter('User','zipCode',=,'binaryprefix:9',true,true)", LIMIT => 5}
+ROW  COLUMN+CELL
+ 1000_3193 column=Movie:genres, timestamp=2026-10-22T04:00:24.828, value=Crime
+ 1000_3193 column=Movie:movieId, timestamp=2026-10-22T04:00:24.828, value=1000
+ 1000_3193 column=Movie:title, timestamp=2026-10-22T04:00:24.828, value=Curdled (1996)
+ 1000_3193 column=Rating:score, timestamp=2026-10-22T04:00:24.828, value=2
+ 1000_3193 column=Rating:timestamp, timestamp=2026-10-22T04:00:24.828, value=968645592
+ 1000_3193 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:24.828, value=1
+ 1000_3193 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:24.828, value=14
+ 1000_3193 column=User:age, timestamp=2026-10-22T04:00:24.828, value=25
+ 1000_3193 column=User:gender, timestamp=2026-10-22T04:00:24.828, value=M
+ 1000_3193 column=User:occupation, timestamp=2026-10-22T04:00:24.828, value=0
+ 1000_3193 column=User:userId, timestamp=2026-10-22T04:00:24.828, value=3193
+ 1000_3193 column=User:zipCode, timestamp=2026-10-22T04:00:24.828, value=92019
+ 1000_3197 column=Movie:genres, timestamp=2026-10-22T04:00:24.869, value=Crime
+ 1000_3197 column=Movie:movieId, timestamp=2026-10-22T04:00:24.869, value=1000
+ 1000_3197 column=Movie:title, timestamp=2026-10-22T04:00:24.869, value=Curdled (1996)
+ 1000_3197 column=Rating:score, timestamp=2026-10-22T04:00:24.869, value=3
+ 1000_3197 column=Rating:timestamp, timestamp=2026-10-22T04:00:24.869, value=968637191
+ 1000_3197 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:24.869, value=1
+ 1000_3197 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:24.869, value=14
+ 1000_3197 column=User:age, timestamp=2026-10-22T04:00:24.869, value=18
+ 1000_3197 column=User:gender, timestamp=2026-10-22T04:00:24.869, value=F
+ 1000_3197 column=User:occupation, timestamp=2026-10-22T04:00:24.869, value=14
+ 1000_3197 column=User:userId, timestamp=2026-10-22T04:00:24.869, value=3197
+ 1000_3197 column=User:zipCode, timestamp=2026-10-22T04:00:24.869, value=94110
+ 1000_3224 column=Movie:genres, timestamp=2026-10-22T04:00:25.079, value=Crime
+ 1000_3224 column=Movie:movieId, timestamp=2026-10-22T04:00:25.079, value=1000
+ 1000_3224 column=Movie:title, timestamp=2026-10-22T04:00:25.079, value=Curdled (1996)
+ 1000_3224 column=Rating:score, timestamp=2026-10-22T04:00:25.079, value=4
+ 1000_3224 column=Rating:timestamp, timestamp=2026-10-22T04:00:25.079, value=968541342
+ 1000_3224 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:25.079, value=1
+ 1000_3224 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:25.079, value=14
+ 1000_3224 column=User:age, timestamp=2026-10-22T04:00:25.079, value=25
+ 1000_3224 column=User:gender, timestamp=2026-10-22T04:00:25.079, value=F
+ 1000_3224 column=User:occupation, timestamp=2026-10-22T04:00:25.079, value=14
+ 1000_3224 column=User:userId, timestamp=2026-10-22T04:00:25.079, value=3224
+ 1000_3224 column=User:zipCode, timestamp=2026-10-22T04:00:25.079, value=93428
+ 1000_474 column=Movie:genres, timestamp=2026-10-22T04:00:04.629, value=Crime
+ 1000_474 column=Movie:movieId, timestamp=2026-10-22T04:00:04.629, value=1000
+ 1000_474 column=Movie:title, timestamp=2026-10-22T04:00:04.629, value=Curdled (1996)
+ 1000_474 column=Rating:score, timestamp=2026-10-22T04:00:04.629, value=5
+ 1000_474 column=Rating:timestamp, timestamp=2026-10-22T04:00:04.629, value=976240118
+ 1000_474 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:04.629, value=1
+ 1000_474 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:04.629, value=14
+ 1000_474 column=User:age, timestamp=2026-10-22T04:00:04.629, value=25
+ 1000_474 column=User:gender, timestamp=2026-10-22T04:00:04.629, value=M
+ 1000_474 column=User:occupation, timestamp=2026-10-22T04:00:04.629, value=17
+ 1000_474 column=User:userId, timestamp=2026-10-22T04:00:04.629, value=474
+ 1000_474 column=User:zipCode, timestamp=2026-10-22T04:00:04.629, value=92126
+ 1000_5426 column=Movie:genres, timestamp=2026-10-22T04:00:41.607, value=Crime
+ 1000_5426 column=Movie:movieId, timestamp=2026-10-22T04:00:41.607, value=1000
+ 1000_5426 column=Movie:title, timestamp=2026-10-22T04:00:41.607, value=Curdled (1996)
+ 1000_5426 column=Rating:score, timestamp=2026-10-22T04:00:41.607, value=2
+ 1000_5426 column=Rating:timestamp, timestamp=2026-10-22T04:00:41.607, value=960100738
+ 1000_5426 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:41.607, value=1
+ 1000_5426 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:41.607, value=14
+ 1000_5426 column=User:age, timestamp=2026-10-22T04:00:41.607, value=25
+ 1000_5426 column=User:gender, timestamp=2026-10-22T04:00:41.607, value=M
+ 1000_5426 column=User:occupation, timestamp=2026-10-22T04:00:41.607, value=14
+ 1000_5426 column=User:userId, timestamp=2026-10-22T04:00:41.607, value=5426
+ 1000_5426 column=User:zipCode, timestamp=2026-10-22T04:00:41.607, value=95821
+5 row(s)
+Took 0.0455 seconds
+hbase:005:0> exit

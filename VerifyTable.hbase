@@ -1,0 +1,6 @@
+describe 'movielens_ratings'
+scan 'movielens_ratings', {LIMIT => 5}
+scan 'movielens_ratings', {STARTROW => '1193_', STOPROW => '1193`', LIMIT => 5}
+scan 'movielens_ratings', {FILTER => "SingleColumnValueFilter('User','userId',=,'binary:1',true,true)", LIMIT => 5}
+get 'movielens_ratings', '1193_1'
+exit

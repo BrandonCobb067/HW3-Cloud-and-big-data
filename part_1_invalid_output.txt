@@ -1,0 +1,3 @@
+RowKey	Rating
+Total ratings checked: 1000209
+Invalid ratings: 0

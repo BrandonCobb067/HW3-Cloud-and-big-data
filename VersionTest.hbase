@@ -1,0 +1,3 @@
+alter 'movielens_ratings', {NAME => 'Rating', VERSIONS => 2}
+get 'movielens_ratings', '1193_1', {COLUMN => 'Rating:score', VERSIONS => 2}
+exit

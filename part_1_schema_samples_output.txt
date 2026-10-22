@@ -1,0 +1,224 @@
+hbase:001:0> describe 'movielens_ratings'
+Table movielens_ratings is ENABLED
+movielens_ratings, {TABLE_ATTRIBUTES => {METADATA => {'hbase.store.file-tracker.impl' => 'DEFAULT'}}}
+COLUMN FAMILIES DESCRIPTION
+{NAME => 'Movie', INDEX_BLOCK_ENCODING => 'NONE', VERSIONS => '1', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', MIN_VERSIONS => '0', REPLICATION_SCOPE => '0', BLOOMFILTER => 'ROW', IN_MEMORY => 'false', COMPRESSION => 'NONE', BLOCKCACHE => 'true', BLOCKSIZE => '65536 B (64KB)'}
+
+{NAME => 'Rating', INDEX_BLOCK_ENCODING => 'NONE', VERSIONS => '1', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', MIN_VERSIONS => '0', REPLICATION_SCOPE => '0', BLOOMFILTER => 'ROW', IN_MEMORY => 'false', COMPRESSION => 'NONE', BLOCKCACHE => 'true', BLOCKSIZE => '65536 B (64KB)'}
+
+{NAME => 'RatingMetrics', INDEX_BLOCK_ENCODING => 'NONE', VERSIONS => '1', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', MIN_VERSIONS => '0', REPLICATION_SCOPE => '0', BLOOMFILTER => 'ROW', IN_MEMORY => 'false', COMPRESSION => 'NONE', BLOCKCACHE => 'true', BLOCKSIZE => '65536 B (64KB)'}
+
+{NAME => 'User', INDEX_BLOCK_ENCODING => 'NONE', VERSIONS => '1', KEEP_DELETED_CELLS => 'FALSE', DATA_BLOCK_ENCODING => 'NONE', TTL => 'FOREVER', MIN_VERSIONS => '0', REPLICATION_SCOPE => '0', BLOOMFILTER => 'ROW', IN_MEMORY => 'false', COMPRESSION => 'NONE', BLOCKCACHE => 'true', BLOCKSIZE => '65536 B (64KB)'}
+
+4 row(s)
+Quota is disabled
+Took 0.4642 seconds
+hbase:002:0> scan 'movielens_ratings', {LIMIT => 5}
+ROW  COLUMN+CELL
+ 1000_1733 column=Movie:genres, timestamp=2026-10-22T04:00:14.871, value=Crime
+ 1000_1733 column=Movie:movieId, timestamp=2026-10-22T04:00:14.871, value=1000
+ 1000_1733 column=Movie:title, timestamp=2026-10-22T04:00:14.871, value=Curdled (1996)
+ 1000_1733 column=Rating:score, timestamp=2026-10-22T04:00:14.871, value=2
+ 1000_1733 column=Rating:timestamp, timestamp=2026-10-22T04:00:14.871, value=986711740
+ 1000_1733 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:14.871, value=1
+ 1000_1733 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:14.871, value=14
+ 1000_1733 column=User:age, timestamp=2026-10-22T04:00:14.871, value=18
+ 1000_1733 column=User:gender, timestamp=2026-10-22T04:00:14.871, value=M
+ 1000_1733 column=User:occupation, timestamp=2026-10-22T04:00:14.871, value=14
+ 1000_1733 column=User:userId, timestamp=2026-10-22T04:00:14.871, value=1733
+ 1000_1733 column=User:zipCode, timestamp=2026-10-22T04:00:14.871, value=43725
+ 1000_2820 column=Movie:genres, timestamp=2026-10-22T04:00:22.252, value=Crime
+ 1000_2820 column=Movie:movieId, timestamp=2026-10-22T04:00:22.252, value=1000
+ 1000_2820 column=Movie:title, timestamp=2026-10-22T04:00:22.252, value=Curdled (1996)
+ 1000_2820 column=Rating:score, timestamp=2026-10-22T04:00:22.252, value=3
+ 1000_2820 column=Rating:timestamp, timestamp=2026-10-22T04:00:22.252, value=986395650
+ 1000_2820 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:22.252, value=1
+ 1000_2820 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:22.252, value=14
+ 1000_2820 column=User:age, timestamp=2026-10-22T04:00:22.252, value=35
+ 1000_2820 column=User:gender, timestamp=2026-10-22T04:00:22.252, value=F
+ 1000_2820 column=User:occupation, timestamp=2026-10-22T04:00:22.252, value=0
+ 1000_2820 column=User:userId, timestamp=2026-10-22T04:00:22.252, value=2820
+ 1000_2820 column=User:zipCode, timestamp=2026-10-22T04:00:22.252, value=02138
+ 1000_3032 column=Movie:genres, timestamp=2026-10-22T04:00:23.856, value=Crime
+ 1000_3032 column=Movie:movieId, timestamp=2026-10-22T04:00:23.856, value=1000
+ 1000_3032 column=Movie:title, timestamp=2026-10-22T04:00:23.856, value=Curdled (1996)
+ 1000_3032 column=Rating:score, timestamp=2026-10-22T04:00:23.856, value=4
+ 1000_3032 column=Rating:timestamp, timestamp=2026-10-22T04:00:23.856, value=970350876
+ 1000_3032 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:23.856, value=1
+ 1000_3032 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:23.856, value=14
+ 1000_3032 column=User:age, timestamp=2026-10-22T04:00:23.856, value=25
+ 1000_3032 column=User:gender, timestamp=2026-10-22T04:00:23.856, value=M
+ 1000_3032 column=User:occupation, timestamp=2026-10-22T04:00:23.856, value=0
+ 1000_3032 column=User:userId, timestamp=2026-10-22T04:00:23.856, value=3032
+ 1000_3032 column=User:zipCode, timestamp=2026-10-22T04:00:23.856, value=47303
+ 1000_3193 column=Movie:genres, timestamp=2026-10-22T04:00:24.828, value=Crime
+ 1000_3193 column=Movie:movieId, timestamp=2026-10-22T04:00:24.828, value=1000
+ 1000_3193 column=Movie:title, timestamp=2026-10-22T04:00:24.828, value=Curdled (1996)
+ 1000_3193 column=Rating:score, timestamp=2026-10-22T04:00:24.828, value=2
+ 1000_3193 column=Rating:timestamp, timestamp=2026-10-22T04:00:24.828, value=968645592
+ 1000_3193 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:24.828, value=1
+ 1000_3193 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:24.828, value=14
+ 1000_3193 column=User:age, timestamp=2026-10-22T04:00:24.828, value=25
+ 1000_3193 column=User:gender, timestamp=2026-10-22T04:00:24.828, value=M
+ 1000_3193 column=User:occupation, timestamp=2026-10-22T04:00:24.828, value=0
+ 1000_3193 column=User:userId, timestamp=2026-10-22T04:00:24.828, value=3193
+ 1000_3193 column=User:zipCode, timestamp=2026-10-22T04:00:24.828, value=92019
+ 1000_3197 column=Movie:genres, timestamp=2026-10-22T04:00:24.869, value=Crime
+ 1000_3197 column=Movie:movieId, timestamp=2026-10-22T04:00:24.869, value=1000
+ 1000_3197 column=Movie:title, timestamp=2026-10-22T04:00:24.869, value=Curdled (1996)
+ 1000_3197 column=Rating:score, timestamp=2026-10-22T04:00:24.869, value=3
+ 1000_3197 column=Rating:timestamp, timestamp=2026-10-22T04:00:24.869, value=968637191
+ 1000_3197 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:24.869, value=1
+ 1000_3197 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:24.869, value=14
+ 1000_3197 column=User:age, timestamp=2026-10-22T04:00:24.869, value=18
+ 1000_3197 column=User:gender, timestamp=2026-10-22T04:00:24.869, value=F
+ 1000_3197 column=User:occupation, timestamp=2026-10-22T04:00:24.869, value=14
+ 1000_3197 column=User:userId, timestamp=2026-10-22T04:00:24.869, value=3197
+ 1000_3197 column=User:zipCode, timestamp=2026-10-22T04:00:24.869, value=94110
+5 row(s)
+Took 0.1287 seconds
+hbase:003:0> scan 'movielens_ratings', {STARTROW => '1193_', STOPROW => '1193`', LIMIT => 5}
+ROW  COLUMN+CELL
+ 1193_1 column=Movie:genres, timestamp=2026-10-22T04:00:01.305, value=Drama
+ 1193_1 column=Movie:movieId, timestamp=2026-10-22T04:00:01.305, value=1193
+ 1193_1 column=Movie:title, timestamp=2026-10-22T04:00:01.305, value=One Flew Over the Cuckoo's Nest (1975)
+ 1193_1 column=Rating:score, timestamp=2026-10-22T04:00:01.305, value=5
+ 1193_1 column=Rating:timestamp, timestamp=2026-10-22T04:00:01.305, value=978300760
+ 1193_1 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:01.305, value=1
+ 1193_1 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:01.305, value=38
+ 1193_1 column=User:age, timestamp=2026-10-22T04:00:01.305, value=1
+ 1193_1 column=User:gender, timestamp=2026-10-22T04:00:01.305, value=F
+ 1193_1 column=User:occupation, timestamp=2026-10-22T04:00:01.305, value=10
+ 1193_1 column=User:userId, timestamp=2026-10-22T04:00:01.305, value=1
+ 1193_1 column=User:zipCode, timestamp=2026-10-22T04:00:01.305, value=48067
+ 1193_1003 column=Movie:genres, timestamp=2026-10-22T04:00:08.624, value=Drama
+ 1193_1003 column=Movie:movieId, timestamp=2026-10-22T04:00:08.624, value=1193
+ 1193_1003 column=Movie:title, timestamp=2026-10-22T04:00:08.624, value=One Flew Over the Cuckoo's Nest (1975)
+ 1193_1003 column=Rating:score, timestamp=2026-10-22T04:00:08.624, value=4
+ 1193_1003 column=Rating:timestamp, timestamp=2026-10-22T04:00:08.624, value=975038997
+ 1193_1003 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:08.624, value=1
+ 1193_1003 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:08.624, value=38
+ 1193_1003 column=User:age, timestamp=2026-10-22T04:00:08.624, value=25
+ 1193_1003 column=User:gender, timestamp=2026-10-22T04:00:08.624, value=M
+ 1193_1003 column=User:occupation, timestamp=2026-10-22T04:00:08.624, value=2
+ 1193_1003 column=User:userId, timestamp=2026-10-22T04:00:08.624, value=1003
+ 1193_1003 column=User:zipCode, timestamp=2026-10-22T04:00:08.624, value=19320
+ 1193_1010 column=Movie:genres, timestamp=2026-10-22T04:00:08.661, value=Drama
+ 1193_1010 column=Movie:movieId, timestamp=2026-10-22T04:00:08.661, value=1193
+ 1193_1010 column=Movie:title, timestamp=2026-10-22T04:00:08.661, value=One Flew Over the Cuckoo's Nest (1975)
+ 1193_1010 column=Rating:score, timestamp=2026-10-22T04:00:08.661, value=5
+ 1193_1010 column=Rating:timestamp, timestamp=2026-10-22T04:00:08.661, value=975231967
+ 1193_1010 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:08.661, value=1
+ 1193_1010 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:08.661, value=38
+ 1193_1010 column=User:age, timestamp=2026-10-22T04:00:08.661, value=25
+ 1193_1010 column=User:gender, timestamp=2026-10-22T04:00:08.661, value=M
+ 1193_1010 column=User:occupation, timestamp=2026-10-22T04:00:08.661, value=0
+ 1193_1010 column=User:userId, timestamp=2026-10-22T04:00:08.661, value=1010
+ 1193_1010 column=User:zipCode, timestamp=2026-10-22T04:00:08.661, value=10310
+ 1193_1014 column=Movie:genres, timestamp=2026-10-22T04:00:08.699, value=Drama
+ 1193_1014 column=Movie:movieId, timestamp=2026-10-22T04:00:08.699, value=1193
+ 1193_1014 column=Movie:title, timestamp=2026-10-22T04:00:08.699, value=One Flew Over the Cuckoo's Nest (1975)
+ 1193_1014 column=Rating:score, timestamp=2026-10-22T04:00:08.699, value=4
+ 1193_1014 column=Rating:timestamp, timestamp=2026-10-22T04:00:08.699, value=975015511
+ 1193_1014 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:08.699, value=1
+ 1193_1014 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:08.699, value=38
+ 1193_1014 column=User:age, timestamp=2026-10-22T04:00:08.699, value=45
+ 1193_1014 column=User:gender, timestamp=2026-10-22T04:00:08.699, value=F
+ 1193_1014 column=User:occupation, timestamp=2026-10-22T04:00:08.699, value=17
+ 1193_1014 column=User:userId, timestamp=2026-10-22T04:00:08.699, value=1014
+ 1193_1014 column=User:zipCode, timestamp=2026-10-22T04:00:08.699, value=03054
+ 1193_1015 column=Movie:genres, timestamp=2026-10-22T04:00:08.737, value=Drama
+ 1193_1015 column=Movie:movieId, timestamp=2026-10-22T04:00:08.737, value=1193
+ 1193_1015 column=Movie:title, timestamp=2026-10-22T04:00:08.737, value=One Flew Over the Cuckoo's Nest (1975)
+ 1193_1015 column=Rating:score, timestamp=2026-10-22T04:00:08.737, value=5
+ 1193_1015 column=Rating:timestamp, timestamp=2026-10-22T04:00:08.737, value=975015686
+ 1193_1015 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:08.737, value=1
+ 1193_1015 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:08.737, value=38
+ 1193_1015 column=User:age, timestamp=2026-10-22T04:00:08.737, value=35
+ 1193_1015 column=User:gender, timestamp=2026-10-22T04:00:08.737, value=M
+ 1193_1015 column=User:occupation, timestamp=2026-10-22T04:00:08.737, value=3
+ 1193_1015 column=User:userId, timestamp=2026-10-22T04:00:08.737, value=1015
+ 1193_1015 column=User:zipCode, timestamp=2026-10-22T04:00:08.737, value=11220
+5 row(s)
+Took 0.0608 seconds
+hbase:004:0> scan 'movielens_ratings', {FILTER => "SingleColumnValueFilter('User','userId',=,'binary:1',true,true)", LIMIT => 5}
+ROW  COLUMN+CELL
+ 1022_1 column=Movie:genres, timestamp=2026-10-22T04:00:01.305, value=Animation|Children's|Musical
+ 1022_1 column=Movie:movieId, timestamp=2026-10-22T04:00:01.305, value=1022
+ 1022_1 column=Movie:title, timestamp=2026-10-22T04:00:01.305, value=Cinderella (1950)
+ 1022_1 column=Rating:score, timestamp=2026-10-22T04:00:01.305, value=5
+ 1022_1 column=Rating:timestamp, timestamp=2026-10-22T04:00:01.305, value=978300055
+ 1022_1 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:01.305, value=3
+ 1022_1 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:01.305, value=17
+ 1022_1 column=User:age, timestamp=2026-10-22T04:00:01.305, value=1
+ 1022_1 column=User:gender, timestamp=2026-10-22T04:00:01.305, value=F
+ 1022_1 column=User:occupation, timestamp=2026-10-22T04:00:01.305, value=10
+ 1022_1 column=User:userId, timestamp=2026-10-22T04:00:01.305, value=1
+ 1022_1 column=User:zipCode, timestamp=2026-10-22T04:00:01.305, value=48067
+ 1028_1 column=Movie:genres, timestamp=2026-10-22T04:00:01.305, value=Children's|Comedy|Musical
+ 1028_1 column=Movie:movieId, timestamp=2026-10-22T04:00:01.305, value=1028
+ 1028_1 column=Movie:title, timestamp=2026-10-22T04:00:01.305, value=Mary Poppins (1964)
+ 1028_1 column=Rating:score, timestamp=2026-10-22T04:00:01.305, value=5
+ 1028_1 column=Rating:timestamp, timestamp=2026-10-22T04:00:01.305, value=978301777
+ 1028_1 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:01.305, value=3
+ 1028_1 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:01.305, value=19
+ 1028_1 column=User:age, timestamp=2026-10-22T04:00:01.305, value=1
+ 1028_1 column=User:gender, timestamp=2026-10-22T04:00:01.305, value=F
+ 1028_1 column=User:occupation, timestamp=2026-10-22T04:00:01.305, value=10
+ 1028_1 column=User:userId, timestamp=2026-10-22T04:00:01.305, value=1
+ 1028_1 column=User:zipCode, timestamp=2026-10-22T04:00:01.305, value=48067
+ 1029_1 column=Movie:genres, timestamp=2026-10-22T04:00:01.305, value=Animation|Children's|Musical
+ 1029_1 column=Movie:movieId, timestamp=2026-10-22T04:00:01.305, value=1029
+ 1029_1 column=Movie:title, timestamp=2026-10-22T04:00:01.305, value=Dumbo (1941)
+ 1029_1 column=Rating:score, timestamp=2026-10-22T04:00:01.305, value=5
+ 1029_1 column=Rating:timestamp, timestamp=2026-10-22T04:00:01.305, value=978302205
+ 1029_1 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:01.305, value=3
+ 1029_1 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:01.305, value=12
+ 1029_1 column=User:age, timestamp=2026-10-22T04:00:01.305, value=1
+ 1029_1 column=User:gender, timestamp=2026-10-22T04:00:01.305, value=F
+ 1029_1 column=User:occupation, timestamp=2026-10-22T04:00:01.305, value=10
+ 1029_1 column=User:userId, timestamp=2026-10-22T04:00:01.305, value=1
+ 1029_1 column=User:zipCode, timestamp=2026-10-22T04:00:01.305, value=48067
+ 1035_1 column=Movie:genres, timestamp=2026-10-22T04:00:01.305, value=Musical
+ 1035_1 column=Movie:movieId, timestamp=2026-10-22T04:00:01.305, value=1035
+ 1035_1 column=Movie:title, timestamp=2026-10-22T04:00:01.305, value=Sound of Music, The (1965)
+ 1035_1 column=Rating:score, timestamp=2026-10-22T04:00:01.305, value=5
+ 1035_1 column=Rating:timestamp, timestamp=2026-10-22T04:00:01.305, value=978301753
+ 1035_1 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:01.305, value=1
+ 1035_1 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:01.305, value=26
+ 1035_1 column=User:age, timestamp=2026-10-22T04:00:01.305, value=1
+ 1035_1 column=User:gender, timestamp=2026-10-22T04:00:01.305, value=F
+ 1035_1 column=User:occupation, timestamp=2026-10-22T04:00:01.305, value=10
+ 1035_1 column=User:userId, timestamp=2026-10-22T04:00:01.305, value=1
+ 1035_1 column=User:zipCode, timestamp=2026-10-22T04:00:01.305, value=48067
+ 1097_1 column=Movie:genres, timestamp=2026-10-22T04:00:01.305, value=Children's|Drama|Fantasy|Sci-Fi
+ 1097_1 column=Movie:movieId, timestamp=2026-10-22T04:00:01.305, value=1097
+ 1097_1 column=Movie:title, timestamp=2026-10-22T04:00:01.305, value=E.T. the Extra-Terrestrial (1982)
+ 1097_1 column=Rating:score, timestamp=2026-10-22T04:00:01.305, value=4
+ 1097_1 column=Rating:timestamp, timestamp=2026-10-22T04:00:01.305, value=978301953
+ 1097_1 column=RatingMetrics:genreCount, timestamp=2026-10-22T04:00:01.305, value=4
+ 1097_1 column=RatingMetrics:titleLength, timestamp=2026-10-22T04:00:01.305, value=33
+ 1097_1 column=User:age, timestamp=2026-10-22T04:00:01.305, value=1
+ 1097_1 column=User:gender, timestamp=2026-10-22T04:00:01.305, value=F
+ 1097_1 column=User:occupation, timestamp=2026-10-22T04:00:01.305, value=10
+ 1097_1 column=User:userId, timestamp=2026-10-22T04:00:01.305, value=1
+ 1097_1 column=User:zipCode, timestamp=2026-10-22T04:00:01.305, value=48067
+5 row(s)
+Took 0.2044 seconds
+hbase:005:0> get 'movielens_ratings', '1193_1'
+COLUMN  CELL
+ Movie:genres timestamp=2026-10-22T04:00:01.305, value=Drama
+ Movie:movieId timestamp=2026-10-22T04:00:01.305, value=1193
+ Movie:title timestamp=2026-10-22T04:00:01.305, value=One Flew Over the Cuckoo's Nest (1975)
+ Rating:score timestamp=2026-10-22T04:00:01.305, value=5
+ Rating:timestamp timestamp=2026-10-22T04:00:01.305, value=978300760
+ RatingMetrics:genreCount timestamp=2026-10-22T04:00:01.305, value=1
+ RatingMetrics:titleLength timestamp=2026-10-22T04:00:01.305, value=38
+ User:age timestamp=2026-10-22T04:00:01.305, value=1
+ User:gender timestamp=2026-10-22T04:00:01.305, value=F
+ User:occupation timestamp=2026-10-22T04:00:01.305, value=10
+ User:userId timestamp=2026-10-22T04:00:01.305, value=1
+ User:zipCode timestamp=2026-10-22T04:00:01.305, value=48067
+1 row(s)
+Took 0.0155 seconds
+hbase:006:0> exit

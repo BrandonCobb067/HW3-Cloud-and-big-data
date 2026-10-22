@@ -1,0 +1,12 @@
+hbase:001:0> alter 'movielens_ratings', {NAME => 'Rating', VERSIONS => 2}
+Updating all regions with the new schema...
+1/1 regions updated.
+Done.
+Took 2.0687 seconds
+hbase:002:0> get 'movielens_ratings', '1193_1', {COLUMN => 'Rating:score', VERSIONS => 2}
+COLUMN  CELL
+ Rating:score timestamp=2026-10-22T04:01:03.272, value=5
+ Rating:score timestamp=2026-10-22T04:01:03.271, value=4
+1 row(s)
+Took 0.0759 seconds
+hbase:003:0> exit

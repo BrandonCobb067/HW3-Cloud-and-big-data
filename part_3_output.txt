@@ -50,7 +50,7 @@ MovieID	Title	Number_of_Ratings	Average_Rating
 3429	Creature Comforts (1990)	274	4.34
 1136	Monty Python and the Holy Grail (1974)	1599	4.34
 1267	Manchurian Candidate, The (1962)	765	4.33
-2324	Life Is Beautiful (La Vita � bella) (1997)	1152	4.33
+2324	Life Is Beautiful (La Vita è bella) (1997)	1152	4.33
 1131	Jean de Florette (1986)	216	4.32
 1147	When We Were Kings (1996)	277	4.32
 1234	Sting, The (1973)	1049	4.32
@@ -172,7 +172,7 @@ MovieID	Title	Number_of_Ratings	Average_Rating
 2918	Ferris Bueller's Day Off (1986)	1473	4.12
 3949	Requiem for a Dream (2000)	304	4.12
 1952	Midnight Cowboy (1969)	663	4.11
-1211	Wings of Desire (Der Himmel �ber Berlin) (1987)	242	4.11
+1211	Wings of Desire (Der Himmel über Berlin) (1987)	242	4.11
 1222	Full Metal Jacket (1987)	1254	4.11
 1287	Ben-Hur (1959)	704	4.11
 1263	Deer Hunter, The (1978)	700	4.11
@@ -274,6 +274,6 @@ MovieID	Title	Number_of_Ratings	Average_Rating
 1249	Nikita (La Femme Nikita) (1990)	733	4.01
 2944	Dirty Dozen, The (1967)	707	4.00
 1175	Delicatessen (1991)	368	4.00
-1238	Local Hero (1983)	351	4.00
 497	Much Ado About Nothing (1993)	667	4.00
+1238	Local Hero (1983)	351	4.00
 2670	Run Silent, Run Deep (1958)	220	4.00

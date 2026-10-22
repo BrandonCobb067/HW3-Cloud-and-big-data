@@ -1,0 +1,7 @@
+# Reset only the assignment table so repeated runs start with clean data.
+if exists 'movielens_ratings'
+  disable 'movielens_ratings' if is_enabled 'movielens_ratings'
+  drop 'movielens_ratings'
+end
+create 'movielens_ratings', 'User', 'Movie', 'Rating', 'RatingMetrics'
+exit

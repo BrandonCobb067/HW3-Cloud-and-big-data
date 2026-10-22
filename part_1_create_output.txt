@@ -1,0 +1,5 @@
+hbase:001:0> create 'movielens_ratings', 'User', 'Movie', 'Rating', 'RatingMetrics'
+Created table movielens_ratings
+Took 0.9776 seconds
+=> Hbase::Table - movielens_ratings
+hbase:002:0> exit

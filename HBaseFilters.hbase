@@ -1,0 +1,5 @@
+scan 'movielens_ratings', {FILTER => "SingleColumnValueFilter('Movie','title',=,'regexstring:Star|Toy',true,true)", LIMIT => 5}
+scan 'movielens_ratings', {FILTER => "SingleColumnValueFilter('Movie','genres',=,'substring:Comedy',true,true) AND SingleColumnValueFilter('Movie','genres',=,'substring:Drama',true,true)", LIMIT => 5}
+scan 'movielens_ratings', {FILTER => "SingleColumnValueFilter('RatingMetrics','genreCount',=,'regexstring:^([3-9]|[1-9][0-9]+)$',true,true)", LIMIT => 5}
+scan 'movielens_ratings', {FILTER => "SingleColumnValueFilter('User','zipCode',=,'binaryprefix:9',true,true)", LIMIT => 5}
+exit
