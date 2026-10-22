@@ -18,6 +18,7 @@ public class Problem3 {
     }
 
     public static void main(String[] args) throws Exception {
+        Locale.setDefault(Locale.US);
         Configuration conf = HBaseConfiguration.create();
         Connection connection = ConnectionFactory.createConnection(conf);
         Table table = connection.getTable(TableName.valueOf("movielens_ratings"));
@@ -77,6 +78,9 @@ public class Problem3 {
             }
         }
 
+        scanner.close();
+        if (totalRatings == 0) throw new IllegalStateException("No ratings loaded");
+
         // Initialize PrintWriter to write to file
         PrintWriter out = new PrintWriter(new FileWriter("part_3_output.txt"));
 
@@ -119,8 +123,13 @@ public class Problem3 {
         }
 
         // Sort descending by average rating
-        topMovies.sort((a, b) -> Double.compare(b.getValue().sumRating / b.getValue().count,
-                                                 a.getValue().sumRating / a.getValue().count));
+        topMovies.sort((a, b) -> {
+            int order = Double.compare(b.getValue().sumRating / b.getValue().count,
+                                       a.getValue().sumRating / a.getValue().count);
+            if (order == 0) order = Integer.compare(b.getValue().count, a.getValue().count);
+            if (order == 0) order = Integer.compare(Integer.parseInt(a.getKey()), Integer.parseInt(b.getKey()));
+            return order;
+        });
 
         for (Map.Entry<String, MovieStats> entry : topMovies) {
             MovieStats ms = entry.getValue();
